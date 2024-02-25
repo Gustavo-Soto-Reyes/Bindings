@@ -15,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Person pp = new Person("GUS", "gus@gmail.com");
+        ButtonClickHandler bth = new ButtonClickHandler(this);
 
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.setPerson(pp);
+        activityMainBinding.setButtonClickHandler(bth);
     }
 }
